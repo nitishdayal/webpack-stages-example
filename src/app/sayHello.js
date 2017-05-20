@@ -1,4 +1,4 @@
-export default name => alert(`Hello ${name}`);
+export const sayHi = name => alert(`Hello ${name}`);
 
 export const donut = "I WANT YOUR DONUTS";
 

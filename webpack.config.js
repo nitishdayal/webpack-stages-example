@@ -1,8 +1,13 @@
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = env => ({
   devtool: env === "production" ? "source-map" : "cheap-eval-source-map",
   entry: "./src/index.js",
   output: {
     filename: "./build/bundle.js"
+  },
+  resolve: {
+    extensions: [".js"]
   },
   module: {
     rules: [
@@ -12,7 +17,12 @@ module.exports = env => ({
       }
     ]
   },
-  resolve: {
-    extensions: [".js"]
-  }
+  plugins: [
+    new HTMLWebpackPlugin({
+      title: "You're the Man Now, Dog!",
+      filename: "index.html",
+      inject: "body",
+      template: "./index.html"
+    })
+  ]
 });
