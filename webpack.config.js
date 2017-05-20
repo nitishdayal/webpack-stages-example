@@ -20,7 +20,7 @@ module.exports = env => ({
   plugins: [
     new HTMLWebpackPlugin({
       title: "You're the Man Now, Dog!",
-      filename: "index.html",
+      filename: "build/index.html",
       inject: "body",
       template: "./index.html"
     })

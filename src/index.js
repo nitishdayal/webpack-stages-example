@@ -1,4 +1,4 @@
-import { sayHi } from "./app/sayHello";
+import sayHi from "./app/sayHello";
 // Import whatever the default export is from /app/sayHello
 // and refer to it in this file as 'Hello'
 
