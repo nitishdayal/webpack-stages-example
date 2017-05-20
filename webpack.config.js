@@ -4,6 +4,14 @@ module.exports = env => ({
   output: {
     filename: "./build/bundle.js"
   },
+  module: {
+    rules: [
+      {
+        test: /\.js(x)?/,
+        use: [{ loader: "ts-loader", options: { transpileOnly: true } }]
+      }
+    ]
+  },
   resolve: {
     extensions: [".js"]
   }
