@@ -9,7 +9,8 @@ This repository houses the example code for my "Stages of Learning Webpack Pt. 2
 
 Branches:
 
--   Master: Main branch, initial Webpack config. The entry & the output.
+-   Master: Base app code + package.json
+-   Init: Initial Webpack configuration
 -   SourceMaps: Adds source maps into the Webpack config.
 -   Loader: Adds TypeScript + TSLoader.
     -   Loader/Babel: Duplicate of loader, using Babel-Loader 
