@@ -3,12 +3,13 @@ export default name => alert(`Hello ${name}`);
 export const donut = "I WANT YOUR DONUTS";
 
 /**
- * Same code, ES5 style:
+ * Same code, ES5(-ish) style:
  * 
- * function sayName(name){
+ * var donut = 'I WANT YOUR DONUTS';
+ * 
+ * module.exports = function(name) {
  *    return alert('Hello ' + name);
- * }
- * 
- * export default sayName;
+ * };
+ * exports.donut = donut;
  * 
  */
