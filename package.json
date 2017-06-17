@@ -11,6 +11,6 @@
   "author": "Nitish Dayal <contact@nitishdayal.me> (http://github.com/nitishdayal)",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^2.5.1"
+    "webpack": "^2.6.1"
   }
 }

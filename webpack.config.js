@@ -15,11 +15,7 @@ module.exports = env => {
   return {
     devtool,
     entry: "./src/index.js",
-    output: {
-      filename: "./build/bundle.js"
-    },
-    resolve: {
-      extensions: [".js"]
-    }
+    output: { filename: "./build/bundle.js" },
+    resolve: { extensions: [".js"] }
   };
 };
