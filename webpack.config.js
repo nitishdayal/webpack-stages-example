@@ -13,6 +13,13 @@ module.exports = env => ({
     rules: [
       {
         test: /\.js(x)?/,
+        use: "source-map-loader",
+        enforce: "pre"
+      }
+    ],
+    loaders: [
+      {
+        test: /\.js(x)?/,
         use: [{ loader: "ts-loader", options: { transpileOnly: true } }]
       }
     ]
@@ -20,7 +27,7 @@ module.exports = env => ({
   plugins: [
     new HTMLWebpackPlugin({
       title: "You're the Man Now, Dog!",
-      filename: "build/index.html",
+      filename: "./build/index.html",
       inject: "body",
       template: "./index.html"
     })
