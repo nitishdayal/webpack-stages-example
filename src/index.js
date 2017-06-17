@@ -3,6 +3,7 @@ import Hello from "./app/sayHello";
 // and refer to it in this file as 'Hello'
 
 const name = "Nitish";
+
 // Reference to the <div id="root"> element in
 const root = document.getElementById("root");
 
