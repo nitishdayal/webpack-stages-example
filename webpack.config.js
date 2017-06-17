@@ -7,6 +7,13 @@ module.exports = env => ({
   module: {
     rules: [
       {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      }
+    ],
+    loaders: [
+      {
         test: /\.js(x)?/,
         use: [{ loader: "ts-loader", options: { transpileOnly: true } }]
       }
