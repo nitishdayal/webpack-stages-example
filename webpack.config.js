@@ -1,5 +1,5 @@
 module.exports = env => ({
-  devtool: env === "production" ? "source-map" : "cheap-eval-source-map",
+  devtool: env && env.production ? "source-map" : "inline-source-map",
   entry: "./src/index.js",
   output: {
     filename: "./build/bundle.js"
@@ -10,12 +10,13 @@ module.exports = env => ({
         enforce: "pre",
         test: /\.js$/,
         loader: "source-map-loader"
-      }
-    ],
-    loaders: [
+      },
       {
         test: /\.js(x)?/,
-        use: [{ loader: "ts-loader", options: { transpileOnly: true } }]
+        loader: "ts-loader",
+        options: {
+          transpileOnly: true
+        }
       }
     ]
   },
