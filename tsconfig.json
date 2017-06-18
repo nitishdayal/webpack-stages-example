@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es3",
-    "module": "commonjs",
     "allowJs": true,
+    "module": "es2015",
+    "target": "es3",
     "sourceMap": true,
     "strict": true
   },
