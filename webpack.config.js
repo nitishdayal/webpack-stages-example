@@ -1,10 +1,6 @@
-module.exports = env => {
-  console.log(env);
-
-  return {
-    devtool: env && env.production ? "source-map" : "cheap-eval-source-map",
-    entry: "./src/index.js",
-    output: { filename: "./build/bundle.js" },
-    resolve: { extensions: [".js"] }
-  }
-};
+module.exports = env => ({
+  devtool: env && env.production ? "source-map" : "cheap-eval-source-map",
+  entry: "./src/index.js",
+  output: { filename: "./build/bundle.js" },
+  resolve: { extensions: [".js"] }
+});
