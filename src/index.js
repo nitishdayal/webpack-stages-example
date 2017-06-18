@@ -5,6 +5,7 @@ import Hello from "./app/sayHello";
 const name = "Nitish";
 
 // Reference to the <div id="root"> element in
+// the `index.html` file.
 const root = document.getElementById("root");
 
 // Call the function that was imported from /app/sayHello, passing in
