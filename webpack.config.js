@@ -1,7 +1,7 @@
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = env => ({
-  devtool: env === "production" ? "source-map" : "cheap-eval-source-map",
+  devtool: env && env.production ? "source-map" : "inline-source-map",
   entry: "./src/index.js",
   output: {
     filename: "./build/bundle.js"
@@ -13,14 +13,11 @@ module.exports = env => ({
     rules: [
       {
         test: /\.js(x)?/,
-        use: "source-map-loader",
-        enforce: "pre"
-      }
-    ],
-    loaders: [
-      {
-        test: /\.js(x)?/,
-        use: [{ loader: "ts-loader", options: { transpileOnly: true } }]
+        loader: "ts-loader",
+        options: {
+          transpileOnly: true,
+          entryFileIsJs: true
+        }
       }
     ]
   },
